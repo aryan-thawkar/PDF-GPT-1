@@ -47,6 +47,24 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../../app/auth/sign-in/[[...sign-in]]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/auth/sign-in/[[...sign-in]]">> = Specific
+  const handler = {} as typeof import("../../../app/auth/sign-in/[[...sign-in]]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/auth/sign-up/[[...sign-up]]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/auth/sign-up/[[...sign-up]]">> = Specific
+  const handler = {} as typeof import("../../../app/auth/sign-up/[[...sign-up]]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/chat/chatId/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/chat/chatId">> = Specific
@@ -86,6 +104,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 
 
 
+
+// Validate ../../../app/auth/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/auth">> = Specific
+  const handler = {} as typeof import("../../../app/auth/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
 
 // Validate ../../../app/layout.tsx
 {
